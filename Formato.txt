@@ -1,0 +1,50 @@
+CONTROL ESCOLAR
+PLANEACION DE ENTREGA POR FECHAS
+
+Struct Admin
+Archivo>Admin	
+Dar de alta alumnos…20 septiembre	
+1.	Nombre	
+2.	Apellido	
+3.	Edad
+4.	Teléfono
+5.	Dirección
+6.	Curp
+7.	Grado
+8.	Datos de los padres
+9.	Clave (Id) > Nueva
+
+2. Dar de baja alumnos…4 Octubre
+3. Modificar datos de alumnos…4 Octubre
+4. Asigna horario a los alumnos…11 Octubre *Estructura  por cada grado*
+5. Información administrativa del alumno…18 Octubre
+
+Struct InfoAdmin Alumno
+
+•	Inscripción
+•	Colegiatura
+•	Beca
+		
+
+Struct Usuario 
+				
+1. Loguearse…25 Octubre
+> Consultar calificaciones…1 noviembre
+> Consultar horario…8 noviembre*
+> Ver datos personales…15 noviembre
+18-22 Noviembre chequeo general del programa y corrección de errores
+
+
+INTEGRANTES DEL EQUIPO
+
+Soto Cortes David
+Cahuantzi Ayllón Daniela
+Fierro Ineza Josué Alberto
+Gil becerril José Luis
+Mejía Núñez Carlos
+Pérez López rocío
+Pérez Meneses Brandon
+
+
+
+
