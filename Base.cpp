@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 //FUNCIONES EXTERNAS
-//#include "Funciones\admin.cpp"
+#include "Funciones\admin.cpp"
 //#include "Funciones\User.cpp"
 
 
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         scanf("%d",&opc);
         switch (opc){
             case 1: //FUNCION ADMINISTRADOR
-                //Admin();
+                Admin();
                 
                 break;
                 
