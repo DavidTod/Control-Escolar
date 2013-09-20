@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 //FUNCIONES EXTERNAS
-//#include "Funciones\admin.cpp"
+#include "Funciones\admin.cpp"
 //#include "Funciones\User.cpp"
 
 
@@ -27,9 +27,10 @@ int main(int argc, char *argv[])
         printf("º-----------------------------------º\n");
         printf("TECLEE UNA OPCION:");
         scanf("%d",&opc);
+        system("cls");
         switch (opc){
             case 1: //FUNCION ADMINISTRADOR
-                //Admin();
+                Admin();
                 
                 break;
                 
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
                 break;
         }
     } while (opc != 3);
-    
+
     system("cls");
     system("PAUSE");
     return 0;

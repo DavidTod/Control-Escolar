@@ -4,9 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char *argv[])
-{
-    
+
 typedef struct Alumno{
         
         char Nombre[31];
@@ -14,29 +12,25 @@ typedef struct Alumno{
         char AM[31];
         int  Edad, Telefono,CURP, Grado;
         char Direccion[50];
-       
-    FILE *Administrador;
-    Alumno RegAdmi;
-        //datos de los padres
+
+
            }; 
-    
+    Alumno RegAdmi;
   
    
-void RegAdmin(){
-     char desea;
-     
-   Administrador = fopen("Archivos\\Administrador.dat","a+b");
-     
+void RegAlumno(){
+
+     char Desea;
       do{
-     
+        system("cls");
         printf("ALTA DE ALUMNOS\n");
         printf ("Proporciona los datos del alumno\n");
-        printf("Apellido Paterno");
+        printf("\nApellido Paterno: ");
         fflush(stdin);
         gets(RegAdmi.AP);
         printf("\nApellido Materno: ");
         gets(RegAdmi.AM);
-        printf ("\nNombre:");
+        printf ("\nNombre: ");
         gets (RegAdmi.Nombre);
         printf("\nEdad: ");
         scanf("%d",&RegAdmi.Edad);
@@ -45,16 +39,15 @@ void RegAdmin(){
         printf("\nDireccion: ");
         fflush(stdin);
         gets(RegAdmi.Direccion);
-        printf ("\nCURP");
+        printf ("\nCURP: ");
         scanf("%d", RegAdmi.CURP);
-        printf ("\nGrado");
+        printf ("\nGrado: ");
         scanf ("%d", RegAdmi.Grado);
         
-
-                   
-    
-
-  
-
+        system("cls");
+        printf("DESEA PROCESAR OTRO USUARIO (s/n)?: \n");
+        fflush(stdin);
+        Desea=getchar();
+        
+}while(Desea == 's');
 }
-
