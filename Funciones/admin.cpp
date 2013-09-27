@@ -8,43 +8,56 @@
 
 
 void Admin(){
-//principal
+//Menu Principal Admin
 
 	int opc;
 	do
 	{
 		system("cls");
-		printf("1. Crear Usuario\n");
-		printf("2. Eliminar Usuario\n");
-		printf("3. Modificar Usuario\n");
-		printf("4. Catalogo\n");
-		printf("5. <- Regresar\n");
-		printf("Opcion:");
+		printf("º-----------------------º\n");
+		printf("º 1. Alta Alumno        º\n");
+		printf("º 2. Baja Alumno        º\n");
+		printf("º 3. Modificar Alumno   º\n");
+		printf("º 4. Lista de Alumnos   º\n");
+		printf("º 5. Horarios           º\n");
+		printf("º 6. <- Regresar        º\n");
+		printf("º-----------------------º\n");
+		printf("\nTECLEE UNA OPCION: ");
 		scanf("%d",&opc);
+		
 	switch (opc){
+           
 		case 1:
 
-			RegAlumno();
+			RegAlumno(); //(David)
+			
+			
 		break;
 
 		case 2:
 
-			//BajasU();
+			//BajasU(); (David)
 		break;
 
 		case 3:
 
 
-		      //ModUsuario();
+		      //ModUsuario(); (Danny)
 		break;
 
 		case 4:
 
-			//CatalogoU();
+			//CatalogoU(); (josue)
+
+		break;
+		
+		case 5:
+
+			//Horario(); 
 
 		break;
 	}
-	} while (opc !=5);
+	} while (opc !=6);
 	
 
 }

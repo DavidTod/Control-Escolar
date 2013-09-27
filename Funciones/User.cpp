@@ -6,25 +6,46 @@
 
 
 typedef struct Alumno{
-        
-        char Nombre[31];
-        char AP[31];
-        char AM[31];
-        int  Edad, Telefono,CURP, Grado;
-        char Direccion[50];
+    
+    //Variables Estructura
+    char Nombre[31];
+    char AP[31];
+    char AM[31];
+    int  Edad;
+    char Direccion[50];
+    int Telefono;
+    char CURP;
+    int Grado;
+    int Id;
+    int Activo;
+    
+    
+};
+//Variables
+Alumno RegAdmi;
+FILE *Usuario;
+FILE *ID2;
+int id2;
 
 
-           }; 
-    Alumno RegAdmi;
-  
-   
-void RegAlumno(){
-
-     char Desea;
-      do{
+void RegAlumno(){ //FUNCION REGISTRAR ALUMNOS
+    
+    system("cls");
+    //Variables
+    char Desea;
+    //Instrucciones Archivos
+    Usuario= fopen("Archivos\\Usuarios.dat","a+b");
+    ID2= fopen("Archivos\\ID2.dat","r+b");
+    fread(&id2, sizeof(id2), 1, ID2);
+    //Pedir datos del alumno
+    do{
         system("cls");
-        printf("ALTA DE ALUMNOS\n");
-        printf ("Proporciona los datos del alumno\n");
+        printf("º-----------------------º\n");
+        printf("º << ALTA DE ALUMNOS >> º\n");
+        printf("º-----------------------º\n");
+        
+        printf ("\nPor favor proporcione los datos del alumno a registrar\n\n");
+        printf("---------------------------------------------------------\n");
         printf("\nApellido Paterno: ");
         fflush(stdin);
         gets(RegAdmi.AP);
@@ -40,14 +61,44 @@ void RegAlumno(){
         fflush(stdin);
         gets(RegAdmi.Direccion);
         printf ("\nCURP: ");
-        scanf("%d", RegAdmi.CURP);
-        printf ("\nGrado: ");
-        scanf ("%d", RegAdmi.Grado);
-        
-        system("cls");
-        printf("DESEA PROCESAR OTRO USUARIO (s/n)?: \n");
         fflush(stdin);
-        Desea=getchar();
+        scanf("%d",&RegAdmi.CURP);
+        fflush(stdin);
+        printf("\nGrado: ");
+        scanf("%d",&RegAdmi.Grado);
         
-}while(Desea == 's');
-}
+        fflush(stdin);
+        //ID
+        RegAdmi.Id = id2++;
+        RegAdmi.Activo = 1;
+
+        
+        printf("\nEl ID del Alumno(a) %s es: %d\n\n", RegAdmi.Nombre,RegAdmi.Id);
+        
+        printf(" *ES IMPORTANTE QUE EL ALUMNO RECUERDE SU ID         \n");
+        printf("  YA QUE CON ESTE PODRA ACCEDER AL PORTAL DE ALUMNOS* \n\n");
+
+        
+        system("PAUSE");
+        //GUARDAR REGISTRO
+        fflush(stdin);
+        fwrite(&RegAdmi, sizeof(RegAdmi),1,Usuario);
+        id2= id2*1;
+        //GUARDAR ID
+        fseek(ID2, sizeof(id2)*0,0);
+              fwrite(&id2, sizeof(id2),1,ID2);
+              
+              //OTRO REGISTRO?
+              system("cls");
+              printf("DESEA PROCESAR OTRA ALTA ? (teclee 's' para si o 'n' para no): ");
+              fflush(stdin);
+              Desea=getchar();
+              fread(&id2, sizeof(id2),0,ID2);
+              
+              }while(Desea == 's');
+              
+              //FIN ARCHIVOS
+              fclose(Usuario);
+              fclose(ID2);
+              
+}//FIN FUNCION REGISTRO

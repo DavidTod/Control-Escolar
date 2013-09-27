@@ -19,13 +19,15 @@ int main(int argc, char *argv[])
         //MENU PRINCIPAL
 
         printf("º-----------------------------------º\n");
-        printf("º         <<< Bienvenido >>>        º\n");
+        printf("º       <<< Bienvenido >>>          º\n");
         printf("º-----------------------------------º\n");
         printf("º 1.ADMINISTRADOR                   º\n");
+        printf("º-----------------------------------º\n");
         printf("º 2.ALUMNOS                         º\n");
+        printf("º-----------------------------------º\n");
         printf("º 3.SALIR                           º\n");
         printf("º-----------------------------------º\n");
-        printf("TECLEE UNA OPCION:");
+        printf("\nTECLEE UNA OPCION: ");
         scanf("%d",&opc);
         system("cls");
         switch (opc){
