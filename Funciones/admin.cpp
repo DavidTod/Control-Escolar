@@ -11,6 +11,19 @@ void Admin(){
 //Menu Principal Admin
 
 	int opc;
+	//Variables
+	int pass;
+	//Contraseña es 123456
+
+		 do
+		 {
+		 system("cls");
+		 printf("Password: ");
+		 scanf("%d",&pass);
+		 
+		 
+
+		 } while (pass != 123456); 
 	do
 	{
 		system("cls");
@@ -47,7 +60,7 @@ void Admin(){
 
 		case 4:
 
-			//CatalogoU(); (josue)
+			Lista();
 
 		break;
 		
